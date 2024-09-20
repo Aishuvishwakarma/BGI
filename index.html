@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz Competition 2024</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-gray-100 text-gray-800 bg-gray-800">
+    <!-- Header Section -->
+    <header class="bg-black text-white p-6 shadow-md">
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+          <!-- Logo and Title -->
+          <div class="flex items-center">
+            <!-- Add your logo image here -->
+            <img
+              src="./static/drone_robotics_club.jpeg"
+              alt="Logo"
+              class="w-[200px] h-auto mr-4"
+            />
+            <div>
+              <h1 class="text-3xl font-bold">Quiz Competition 2024</h1>
+              <p class="text-xl mt-4 italic">
+                Test your knowledge and compete for the crown!
+              </p>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="flex items-center">
+            <a
+              href="#guidelines"
+              class="text-white hover:text-yellow-300 mr-6 transition-colors duration-300"
+              >Guidelines</a
+            >
+            <a
+              href="#methodology"
+              class="text-white hover:text-yellow-300 mr-6 transition-colors duration-300"
+              >Methodology</a
+            >
+            <!-- Updated Golden Button with Shadow -->
+            <a
+              href="#register"
+              class="bg-yellow-500 text-black py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-400 transition-colors duration-300"
+            >
+              Register Now
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Competition Image Section -->
+    <div class="w-full py-6">
+      <div
+        class="w-[80%] mx-auto flex justify-center items-center rounded-md overflow-hidden"
+      >
+        <!-- Left Image Section -->
+        <div class="flex-shrink-0 h-[400px] overflow-hidden group relative">
+          <img
+            src="./static/competition_image.jpeg"
+            alt="Competition Image"
+            class="h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+          />
+          <!-- Overlay for Image Hover Effect -->
+          <div
+            class="absolute z-10	 inset-0 bg-black bg-opacity-30 transition-opacity duration-500 ease-in-out group-hover:bg-opacity-50"
+          ></div>
+        </div>
+        <!-- Right Content Section -->
+        <div
+          class="h-[400px] flex flex-col justify-center items-start bg-gray-800 p-8 text-white"
+        >
+          <h2 class="text-6xl font-bold mb-4">
+            Join the Ultimate Quiz Competition
+          </h2>
+          <p class="text-2xl mb-8">
+            Challenge yourself and compete for the crown!
+          </p>
+          <!-- Call to Action Button -->
+          <a
+            href="#register"
+            class="bg-yellow-500 text-black py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-400 transition-colors duration-300"
+          >
+            Register Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Showcase Section -->
+    <section class="bg-gray-100 py-12">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8">Event Showcase</h2>
+
+        <!-- Video Container -->
+        <div
+          class="w-full md:w-1/4 mx-auto relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
+        >
+          <!-- Video (Story Size) -->
+          <video id="eventVideo" class="w-full h-[600px] rounded-lg" controls>
+            <source src="./static/event.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Play/Pause Overlay -->
+          <div
+            id="videoOverlay"
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-100 transition-opacity duration-300 cursor-pointer"
+          >
+            <i
+              id="playPauseIcon"
+              class="bx bx-play-circle text-white text-6xl"
+            ></i>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p class="mt-4 text-lg text-gray-600">
+          Watch the highlight of our latest event and experience the energy!
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Section -->
+    <main class="w-full mx-auto space-y-16" >
+      <!-- Competition Guidelines -->
+      <div
+        id="guidelines"
+        class="w-[80%] mx-auto bg-gray-100 p-8 rounded-lg shadow-lg mt-10"
+      >
+        <h2
+          class="text-4xl font-bold text-indigo-600 text-center border-b-4 border-indigo-500 pb-4"
+        >
+          Competition Guidelines
+        </h2>
+
+        <ul
+          class="mt-8 space-y-6 grid grid-cols-2 items-center justify-center space-x-4 space-y-8"
+        >
+          <li
+            class="flex items-start space-x-4 hover:bg-gray-200 p-2 rounded transition"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full border-2 border-indigo-500 flex items-center justify-center"
+            >
+              <i class="bx bxs-mobile text-indigo-600"></i>
+            </div>
+            <div class="max-w-4xl">
+              <strong class="text-indigo-700">Mobile Phones:</strong> Phones
+              must be turned off and submitted to staff upon arrival. No
+              electronic devices are allowed during the competition.
+            </div>
+          </li>
+          <li
+            class="flex items-start space-x-4 hover:bg-gray-200 p-2 rounded transition"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full border-2 border-indigo-500 flex items-center justify-center"
+            >
+              <i class="bx bxs-time text-indigo-600"></i>
+            </div>
+            <div class="max-w-4xl">
+              <strong class="text-indigo-700">Arrival Time:</strong> Teams must
+              arrive before the reporting time; latecomers will be disqualified.
+            </div>
+          </li>
+          <li
+            class="flex items-start space-x-4 hover:bg-gray-200 p-2 rounded transition"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full border-2 border-indigo-500 flex items-center justify-center"
+            >
+              <i class="bx bx-time text-indigo-600"></i>
+            </div>
+            <div class="max-w-4xl">
+              <strong class="text-indigo-700">Start Time:</strong> Competition
+              starts at 11:00 AM sharp. Be on time to avoid disqualification.
+            </div>
+          </li>
+          <li
+            class="flex items-start space-x-4 hover:bg-gray-200 p-2 rounded transition"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full border-2 border-indigo-500 flex items-center justify-center"
+            >
+              <i class="bx bxs-bar-chart-alt-2 text-indigo-600"></i>
+            </div>
+            <div class="max-w-4xl">
+              <strong class="text-indigo-700">Scoring:</strong> Each question is
+              worth 1 point. No negative marking for the first three wrong
+              answers. From the fourth incorrect answer onward, 1 point will be
+              deducted for each wrong response.
+            </div>
+          </li>
+          <li
+            class="flex items-start space-x-4 hover:bg-gray-200 p-2 rounded transition"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full border-2 border-indigo-500 flex items-center justify-center"
+            >
+              <i class="bx bx-child text-indigo-600"></i>
+            </div>
+            <div class="max-w-4xl">
+              <strong class="text-indigo-700">Mode:</strong> The competition is
+              offline, and all participants must attend in person.
+            </div>
+          </li>
+          <li
+            class="flex items-start space-x-4 hover:bg-gray-200 p-2 rounded transition"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full border-2 border-indigo-500 flex items-center justify-center"
+            >
+              <i class="bx bxs-user-circle text-indigo-600"></i>
+            </div>
+            <div class="max-w-4xl">
+              <strong class="text-indigo-700">Identification:</strong>
+              Participants must wear their uniforms and carry ID cards.
+            </div>
+          </li>
+          <li
+            class="flex items-start space-x-4 hover:bg-gray-200 p-2 rounded transition"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full border-2 border-indigo-500 flex items-center justify-center"
+            >
+              <i class="bx bx-reflect-vertical text-indigo-600"></i>
+            </div>
+            <div class="max-w-4xl">
+              <strong class="text-indigo-700">Tie-Breaker:</strong> An extra
+              question will be used to break ties.
+            </div>
+          </li>
+          <li
+            class="flex items-start space-x-4 hover:bg-gray-200 p-2 rounded transition"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full border-2 border-indigo-500 flex items-center justify-center"
+            >
+              <i class="bx bxs-bowl-rice text-indigo-600"></i>
+            </div>
+            <div class="max-w-4xl">
+              <strong class="text-indigo-700">Lunch:</strong> No scheduled lunch
+              break; manage your time accordingly.
+            </div>
+          </li>
+          <li
+            class="flex items-start space-x-4 hover:bg-gray-200 p-2 rounded transition"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full border-2 border-indigo-500 flex items-center justify-center"
+            >
+              <i class="bx bx-street-view text-indigo-600"></i>
+            </div>
+            <div class="max-w-4xl">
+              <strong class="text-indigo-700">Conduct:</strong> Cheating or
+              misconduct will lead to disqualification. Maintain sportsmanship.
+            </div>
+          </li>
+          <li
+            class="flex items-start space-x-4 hover:bg-gray-200 p-2 rounded transition"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full border-2 border-indigo-500 flex items-center justify-center"
+            >
+              <i class="bx bxs-brain text-indigo-600"></i>
+            </div>
+            <div class="max-w-4xl">
+              <strong class="text-indigo-700">Jury Decision:</strong> The jury’s
+              decisions are final and binding.
+            </div>
+          </li>
+          <li
+            class="flex items-start space-x-4 hover:bg-gray-200 p-2 rounded transition"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full border-2 border-indigo-500 flex items-center justify-center"
+            >
+              <i class="bx bx-calculator text-indigo-600"></i>
+            </div>
+            <div class="max-w-4xl">
+              <strong class="text-indigo-700">Equipment:</strong> No personal
+              devices are allowed; organizers will provide necessary materials.
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-10 text-center">
+          <button
+            class="bg-indigo-600 text-white text-lg font-medium px-8 py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105"
+          >
+            Start your 14-day trial
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Competition Methodology -->
+      <div
+        id="methodology"
+        class="w-[80%] mx-auto bg-white p-8 rounded-lg shadow-xl mt-10"
+      >
+        <h2
+          class="text-4xl font-bold text-indigo-600 text-center border-b-4 border-indigo-500 pb-4"
+        >
+          Quiz Competition Methodology
+        </h2>
+        <ul
+          class="list-disc pl-6 text-lg text-gray-700 grid grid-cols-2 items-center justify-center space-x-4 space-y-8"
+        >
+          <li class="hover:bg-blue-50 p-2 rounded transition">
+            <strong class="text-blue-800">Team Composition:</strong> Teams
+            consist of 2-3 members.
+          </li>
+          <li class="hover:bg-blue-50 p-2 rounded transition">
+            <strong class="text-blue-800">Team Registration:</strong> Teams will
+            receive a number based on their registration.
+          </li>
+          <li class="hover:bg-blue-50 p-2 rounded transition">
+            <strong class="text-blue-800">Competition Structure:</strong>
+            <ul class="list-decimal pl-6 space-y-2">
+              <li>
+                <strong>First Round:</strong> Three parts, each consisting of 20
+                questions. The top 2 teams from each part will advance to the
+                final round.
+              </li>
+              <li>
+                <strong>Final Round:</strong> The final round will determine the
+                winner, first runner-up, and second runner-up.
+              </li>
+            </ul>
+          </li>
+          <li class="hover:bg-blue-50 p-2 rounded transition">
+            <strong class="text-blue-800">Rounds Schedule:</strong>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Part 1:</strong> 11:00 AM - 11:45 AM</li>
+              <li><strong>Part 2:</strong> 12:00 PM - 12:45 PM</li>
+              <li><strong>Part 3:</strong> 1:00 PM - 1:45 PM</li>
+              <li><strong>Final Round:</strong> 2:15 PM - 3:00 PM</li>
+            </ul>
+          </li>
+          <li class="hover:bg-blue-50 p-2 rounded transition">
+            <strong class="text-blue-800">Question Types:</strong> A mix of
+            multiple-choice and true/false questions. Some rounds may include
+            audio-visual questions.
+          </li>
+          <li class="hover:bg-blue-50 p-2 rounded transition">
+            <strong class="text-blue-800">Answering Questions:</strong> Teams
+            must press a buzzer to answer. The first team to buzz will get 30
+            seconds to respond.
+          </li>
+          <li class="hover:bg-blue-50 p-2 rounded transition">
+            <strong class="text-blue-800">Scoring:</strong> Correct answers are
+            worth 1 point. No negative marking for the first two wrong answers,
+            but a deduction of 1 point for subsequent incorrect answers.
+          </li>
+          <li class="hover:bg-blue-50 p-2 rounded transition">
+            <strong class="text-blue-800">Tie-Breaker:</strong> In the event of
+            a tie, a special question will be given, and the jury will decide
+            the winner based on the correct answer.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Register Section -->
+      <!-- Register Section -->
+      <section
+        id="register"
+        class="bg-white w-[80%] mx-auto p-10 rounded-xl shadow-xl text-center mt-12"
+      >
+        <div class="max-w-2xl mx-auto">
+          <h2
+            class="text-4xl font-extrabold text-indigo-600 mb-6 border-b-4 border-indigo-600 inline-block pb-3"
+          >
+            Register Your Team
+          </h2>
+          <p class="mb-6 text-lg text-gray-900 leading-relaxed">
+            Ready to take on the challenge? Register your team today and compete
+            for the top spot!
+          </p>
+          <a
+            href="#"
+            class="inline-block bg-yellow-500 text-white py-4 px-8 rounded-full shadow-lg text-lg font-semibold tracking-wide hover:bg-yellow-600 hover:scale-105 transition-transform duration-300 ease-in-out"
+          >
+            Register Now
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-300 py-8 mt-12">
+      <div class="container mx-auto text-center space-y-6">
+        <!-- Logo or Image Section -->
+        <div class="w-full flex justify-center">
+          <img
+            src="./static/bgibanner.jpeg"
+            alt="Quiz Competition Banner"
+            class="w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300"
+          />
+        </div>
+
+        <!-- Text Content -->
+        <p class="text-lg font-medium">
+          &copy; 2024 Quiz Competition. All Rights Reserved.
+        </p>
+
+        <!-- Social Media Links (Optional) -->
+        <div class="flex justify-center space-x-6">
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white transition-colors duration-300"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white transition-colors duration-300"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white transition-colors duration-300"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+
+        <!-- Footer Links (Optional) -->
+        <div class="flex justify-center space-x-4 text-sm">
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white transition-colors duration-300"
+            >Privacy Policy</a
+          >
+          <span>|</span>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white transition-colors duration-300"
+            >Terms of Service</a
+          >
+          <span>|</span>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-white transition-colors duration-300"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Get video element and play/pause icon
+      const video = document.getElementById("eventVideo");
+      const overlay = document.getElementById("videoOverlay");
+      const playPauseIcon = document.getElementById("playPauseIcon");
+
+      // Function to toggle play/pause
+      function togglePlayPause() {
+        if (video.paused) {
+          video.play();
+          playPauseIcon.classList.remove("bx-play-circle");
+          playPauseIcon.classList.add("bx-pause-circle");
+          overlay.style.opacity = 0; // Hide the overlay when the video plays
+        } else {
+          video.pause();
+          playPauseIcon.classList.remove("bx-pause-circle");
+          playPauseIcon.classList.add("bx-play-circle");
+          overlay.style.opacity = 1; // Show the overlay when the video pauses
+        }
+      }
+
+      // Event listener to toggle play/pause when overlay is clicked
+      overlay.addEventListener("click", togglePlayPause);
+
+      // Hide overlay when video is playing
+      video.addEventListener("play", () => {
+        overlay.style.opacity = 0;
+      });
+
+      // Show overlay when video is paused
+      video.addEventListener("pause", () => {
+        overlay.style.opacity = 1;
+      });
+
+      // Ensure the overlay shows when the video ends
+      video.addEventListener("ended", () => {
+        playPauseIcon.classList.remove("bx-pause-circle");
+        playPauseIcon.classList.add("bx-play-circle");
+        overlay.style.opacity = 1;
+      });
+    </script>
+  </body>
+</html>
